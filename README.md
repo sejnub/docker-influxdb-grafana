@@ -1,8 +1,14 @@
-# Docker-compose files for a simple uptodate
-# InfluxDB
-# + Grafana stack
-# + Telegraf
+# Docker-compose files for a simple uptodate: InfluxDB + Grafana + Telegraf
 
+## Prepare
+
+```bash
+mkdir -p ~/docker/influxdb/data
+mkdir -p ~/docker/telegraf/data
+mkdir -p ~/docker/grafana/data; chown 472:472 ~/docker/grafana/data
+```
+
+##
 Get the stack (only once):
 
 ```
