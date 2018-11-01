@@ -4,9 +4,9 @@
 
 ```bash
 cd ~
-mkdir -p ~/docker/influxdb/data
-mkdir -p ~/docker/telegraf/data
-mkdir -p ~/docker/grafana/data; chown 472:472 ~/docker/grafana/data
+mkdir -p ~/docker-influxdb-grafana/influxdb/data
+mkdir -p ~/docker-influxdb-grafana/telegraf/data
+mkdir -p ~/docker-influxdb-grafana/grafana/data; chown 472:472 ~/docker/grafana/data
 ```
 
 ## Run
@@ -14,6 +14,7 @@ mkdir -p ~/docker/grafana/data; chown 472:472 ~/docker/grafana/data
 ```
 cd ~
 git clone https://github.com/sejnub/docker-influxdb-grafana.git
+cp ./telegraf.conf ~/docker-influxdb-grafana/telegraf/data
 cd docker-influxdb-grafana
 
 docker-compose up -d
