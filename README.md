@@ -6,7 +6,7 @@
 cd ~
 mkdir -p ~/docker-influxdb-grafana/influxdb/data
 mkdir -p ~/docker-influxdb-grafana/telegraf/data
-mkdir -p ~/docker-influxdb-grafana/grafana/data; chown 472:472 ~/docker/grafana/data
+mkdir -p ~/docker-influxdb-grafana/grafana/data; sudo chown 472:472 ~/docker-influxdb-grafana/grafana/data
 ```
 
 ## Run
