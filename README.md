@@ -14,8 +14,8 @@ mkdir -p ~/docker-influxdb-grafana/grafana/data; sudo chown 472:472 ~/docker-inf
 ```
 cd ~
 git clone https://github.com/sejnub/docker-influxdb-grafana.git
-cp ./telegraf.conf ~/docker-influxdb-grafana/telegraf/data
 cd docker-influxdb-grafana
+cp ./telegraf.conf ~/docker-influxdb-grafana/telegraf/data
 
 docker-compose up -d
 ```
