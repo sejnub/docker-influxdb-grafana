@@ -4,18 +4,17 @@
 
 ```bash
 cd ~
+sudo rm -rf ~/docker-influxdb-grafana
+
+cd ~
+git clone https://github.com/sejnub/docker-influxdb-grafana.git
+
+cd docker-influxdb-grafana
 mkdir -p ~/docker-influxdb-grafana/influxdb/data
 mkdir -p ~/docker-influxdb-grafana/telegraf/data
 mkdir -p ~/docker-influxdb-grafana/grafana/data; sudo chown 472:472 ~/docker-influxdb-grafana/grafana/data
-```
 
-## Run
-
-```
-cd ~
-git clone https://github.com/sejnub/docker-influxdb-grafana.git
-cd docker-influxdb-grafana
-cp ./telegraf.conf ~/docker-influxdb-grafana/telegraf/data
+cp ~/docker-influxdb-grafana/telegraf.conf ~/docker-influxdb-grafana/telegraf/data/
 
 docker-compose up -d
 ```
