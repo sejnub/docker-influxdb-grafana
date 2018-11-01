@@ -8,39 +8,27 @@ mkdir -p ~/docker/telegraf/data
 mkdir -p ~/docker/grafana/data; chown 472:472 ~/docker/grafana/data
 ```
 
-##
-Get the stack (only once):
+## Run
 
 ```
-git clone https://github.com/nicolargo/docker-influxdb-grafana.git
+git clone https://github.com/sejnub/docker-influxdb-grafana.git
 cd docker-influxdb-grafana
-docker pull grafana/grafana
-docker pull influxdb
-docker pull telegraf
-```
 
-Run your stack:
-
-```
 docker-compose up -d
-
 ```
 
 Show me the logs:
-
 ```
 docker-compose logs
 ```
 
 Stop it:
-
 ```
 docker-compose stop
 docker-compose rm
 ```
 
 Update it:
-
 ```
 git pull
 docker pull grafana/grafana
@@ -49,7 +37,6 @@ docker pull telegraf
 ```
 
 If you want to run Telegraf, edit the telegraf.conf to yours needs and:
-
 ```
 docker exec telegraf telegraf
 ```
